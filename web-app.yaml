@@ -23,12 +23,12 @@ spec:
             - name: ME_CONFIG_MONGODB_ADMINUSERNAME
               valueFrom:
                 secretKeyRef:
-                  name: secret
+                  name: mongo-secret
                   key: mongo-user
             - name: ME_CONFIG_MONGODB_ADMINPASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: secret
+                  name: mongo-secret
                   key: mongo-password
             - name: ME_CONFIG_MONGODB_SERVER
               valueFrom:
@@ -42,10 +42,11 @@ kind: Service
 metadata:
   name: webapp-service
 spec:
+  type: NodePort
   selector:
     app: webapp
   ports:
     - protocol: TCP
       port: 8081
       targetPort: 8081
-      nodePort: 30200
+      nodePort: 30100
