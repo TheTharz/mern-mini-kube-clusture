@@ -1,6 +1,3 @@
-Here's an example of a `README.md` file for your project. This file includes all the necessary commands to deploy your application using Kubernetes and `kubectl`.
-
-```markdown
 # MERN Mini Kube Cluster
 
 This project sets up a MERN stack application (MongoDB, Express.js, React, Node.js) on a Kubernetes cluster using Minikube. Follow the steps below to deploy the application.
@@ -116,6 +113,3 @@ minikube stop
 ## License
 
 This project is licensed under the MIT License.
-```
-
-Save this content to a file named `README.md` in the root directory of your project. This file provides a comprehensive guide for deploying and managing your MERN application on a Kubernetes cluster using Minikube.
