@@ -93,6 +93,26 @@ minikube service webapp-service
 - Ensure that your AWS EC2 instance has the necessary permissions and security group settings to allow traffic to and from Minikube.
 - If deploying on AWS, you may need to set up proper networking configurations and security group settings.
 
+To access the web page running on your Minikube cluster from your local machine, you need to ensure that your AWS EC2 instance is reachable from your local machine, and then you can forward the port from your EC2 instance to your local machine using SSH port forwarding.
+
+1. **Ensure AWS EC2 Instance is Reachable**: Make sure that your AWS EC2 instance is accessible from your local machine. You should be able to SSH into your EC2 instance from your local terminal.
+
+2. **SSH Port Forwarding**: Once connected to your EC2 instance via SSH, you can forward traffic from a port on your EC2 instance to a port on your local machine using SSH port forwarding.
+
+   ```bash
+   ssh -i <path-to-your-aws-keypair> -L <local-port>:<minikube-ip>:30100 ubuntu@<ec2-instance-public-ip>
+   ```
+
+   Replace:
+   - `<path-to-your-aws-keypair>`: Path to your AWS key pair file.
+   - `<local-port>`: The port on your local machine where you want to access the web page.
+   - `<minikube-ip>`: The IP address of your Minikube cluster (`192.168.49.2` in your case).
+   - `<ec2-instance-public-ip>`: The public IP address of your EC2 instance.
+
+   This command will establish an SSH connection to your EC2 instance and forward traffic from `<local-port>` on your local machine to port `30100` on your Minikube cluster, allowing you to access the web page running on your Minikube cluster from your local machine.
+
+3. **Access Web Page**: Once the SSH connection is established, you can open a web browser on your local machine and navigate to `http://localhost:<local-port>` to access the web page.
+
 ## Troubleshooting
 
 - If you encounter issues with starting Minikube, ensure Docker is running and configured correctly.
