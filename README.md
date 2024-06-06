@@ -129,6 +129,13 @@ kubectl delete -f mongo-config.yaml
 kubectl delete -f secret.yaml
 minikube stop
 ```
+The setup instructions you've provided for deploying a MERN stack application on a Kubernetes cluster using Minikube are detailed and well-organized. Including a troubleshooting section and cleanup instructions adds value to the guide, helping users navigate potential issues and maintain a clean environment.
+
+Here's the added blog reference:
+
+---
+
+**Reference Blog:** [Deploy MERN App on Kubernetes](https://ghazanfaralidevops.medium.com/deploy-mern-app-on-kubernetes-ccacd628aacb)
 
 ## License
 
