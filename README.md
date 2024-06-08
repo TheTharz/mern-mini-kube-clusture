@@ -113,7 +113,7 @@ To access the web page running on your Minikube cluster from your local machine,
 
 3. **Access Web Page**: Once the SSH connection is established, you can open a web browser on your local machine and navigate to `http://localhost:<local-port>` to access the web page.
 
- **Accessing Minikube Dashboard on EC2 Instance Locally**
+## Accessing Minikube Dashboard on EC2 Instance Locally**
 
 This guide outlines the steps to access the Minikube Dashboard, running on an EC2 instance, from your local machine through SSH tunneling.
 
@@ -123,7 +123,7 @@ This guide outlines the steps to access the Minikube Dashboard, running on an EC
 2. **SSH Key Pair**: Have an SSH key pair (.pem file) to authenticate with your EC2 instance.
 3. **Public IP of EC2 Instance**: Obtain the public IP address of your EC2 instance.
 
-## Step 1: Get Minikube Dashboard URL
+### Step 1: Get Minikube Dashboard URL
 
 First, you need to retrieve the Minikube Dashboard URL.
 
@@ -131,7 +131,7 @@ First, you need to retrieve the Minikube Dashboard URL.
 $ minikube dashboard --url
 ```
 
-## Step 2: Create SSH Tunnel
+### Step 2: Create SSH Tunnel
 
 Open another terminal on your local machine and create an SSH tunnel to your EC2 instance.
 
@@ -145,17 +145,17 @@ Replace the placeholders with the actual values:
 - `[remote-port]`: Port number on which Minikube Dashboard is running on the EC2 instance.
 - `[public-ip]`: Public IP address of your EC2 instance.
 
-## Step 3: Access Minikube Dashboard
+### Step 3: Access Minikube Dashboard
 
 Once the SSH tunnel is established, open a web browser and navigate to `http://localhost:[local-port]`.
 
-## Additional Notes
+### Additional Notes
 
 - Ensure Minikube is up and running on your EC2 instance.
 - Make sure the specified local port is not already in use.
 - Keep the SSH session open to maintain the tunnel connection.
 
-## Example
+### Example
 
 For example, if your Minikube Dashboard URL is `http://192.0.2.123:8080`, and you want to access it locally on port `9090`, and your SSH private key is named `my-key.pem`, the command would look like this:
 
