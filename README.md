@@ -113,7 +113,7 @@ To access the web page running on your Minikube cluster from your local machine,
 
 3. **Access Web Page**: Once the SSH connection is established, you can open a web browser on your local machine and navigate to `http://localhost:<local-port>` to access the web page.
 
-# Accessing Minikube Dashboard on EC2 Instance Locally
+ **Accessing Minikube Dashboard on EC2 Instance Locally**
 
 This guide outlines the steps to access the Minikube Dashboard, running on an EC2 instance, from your local machine through SSH tunneling.
 
